@@ -49,11 +49,12 @@ body{
    width: 100%;
    max-width: 1140px;
    padding: 0px 15px;
-   margin: 80px auto;
+   margin: 0 auto;
 }
 
 /*Card*/
 .card {
+   padding: 60px 0px;
 }
 .card__header {
    text-align: center;
@@ -68,10 +69,6 @@ body{
    color: #4c4e61;
    margin: 0px 0px 20px 0px;
 }
-.card__header-text {
-}
-.card__body {
-}
 .card__items {
    display: flex;
    align-items: center;
@@ -80,20 +77,19 @@ body{
 .card__item {
    padding: 33px;
    border-radius: 4px;
-
-   box-shadow: 0 0 10px hsla(229, 6%, 66%, 0.5);
+   box-shadow: 0 0 10px #a3a5ae80;
 }
 .bt-succes{
-   border-top: 4px solid hsl(180, 62%, 55%);
+   border-top: 4px solid #45d3d3;
 }
 .bt-warning{
-   border-top: 4px solid hsl(0, 78%, 62%);
+   border-top: 4px solid #ea5353;
 }
 .bt-danger{
-   border-top: 4px solid hsl(34, 97%, 64%);
+   border-top: 4px solid #fcaf4a;
 }
 .bt-info{
-   border-top: 4px solid hsl(212, 86%, 64%);
+   border-top: 4px solid #549ef2;
 }
 .item{
    width: 31.33%;
@@ -129,4 +125,69 @@ body{
 }
 .bg-calc{
    background-image: url(../images/icon-calculator.svg);
+}
+
+/*Media Query*/
+@media (max-width: 1024px) {
+   .card__items {
+      flex-direction: column;
+   }
+   .item{
+      width: 80%;
+   }
+   .card__inner .card__item:not(:last-child),
+   .item:not(:last-child)
+   {
+      margin: 0px 0px 30px 0px;
+   }
+}
+@media (max-width: 425px) {
+   .card__title {
+      font-size: 24px;
+   }
+   .card__heading {
+      font-size: 24px;
+   }
+   .card__header-text {
+      font-size: 15px;
+      padding: 0px 30px;
+   }
+   .item{
+      width: 95%;
+   }
+   .card__item {
+      padding: 28px;
+   }
+   .card__text {
+      margin: 0px 0px 30px 0px;
+   }
+   .card__icon {
+      width: 60px;
+      height: 60px;
+   }
+}
+@media (max-width: 375px) {
+   .card__title {
+      font-size: 20px;
+   }
+   .card__heading {
+      font-size: 20px;
+   }
+   .card__header-text {
+      font-size: 13px;
+      padding: 0px 15px;
+   }
+   .item{
+      width: 95%;
+   }
+   .card__item {
+      padding: 25px;
+   }
+   .card__text {
+      margin: 0px 0px 30px 0px;
+   }
+   .card__icon {
+      width: 60px;
+      height: 60px;
+   }
 }
